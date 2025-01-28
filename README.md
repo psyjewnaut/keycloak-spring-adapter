@@ -87,6 +87,6 @@ psyjewnaut:
 ## Принцип работы
 
 1. При запросе с Bearer-токеном Spring Security валидирует JWT.
-2. Передаёт его в simpleJwtAuthentication.convert(jwt).
+2. Передаёт его в keycloakJwtConverter.convert(jwt).
 3. Библиотека последовательно вызывает все выбранные конвертеры (realm, resource, scope, groups).
 4. Получившиеся GrantedAuthority (например, ROLE_user, SCOPE_offline_access) складываются в Authentication запроса.
