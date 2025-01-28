@@ -11,10 +11,10 @@ import java.util.stream.Collectors;
  *
  * @author psyjewnaut
  */
-@SuppressWarnings("unchecked")
 public class GroupsConverter implements KeycloakClaimConverter {
 
     @Override
+    @SuppressWarnings("unchecked")
     public Set<SimpleGrantedAuthority> convert(Jwt jwt) {
         Object groupsObj = jwt.getClaims().get("groups");
         if (!(groupsObj instanceof List)) {

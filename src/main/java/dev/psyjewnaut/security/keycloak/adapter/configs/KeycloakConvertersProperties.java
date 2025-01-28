@@ -23,7 +23,7 @@ public class KeycloakConvertersProperties {
     private boolean realmAccess = true;
 
     /**
-     * Read resource_access.<clientId>.roles
+     * Read resource_access.clientId.roles
      */
     private boolean resourceAccess = false;
 

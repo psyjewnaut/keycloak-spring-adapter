@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Composite converters to JwtAuthenticationToken with full GrantedAuthority set.
+ * Composite converter to JwtAuthenticationToken with full GrantedAuthority set.
  *
  * @author psyjewnaut
  */

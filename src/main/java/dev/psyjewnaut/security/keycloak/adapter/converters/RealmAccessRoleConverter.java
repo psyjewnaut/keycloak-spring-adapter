@@ -21,13 +21,11 @@ public class RealmAccessRoleConverter implements KeycloakClaimConverter {
             return Collections.emptySet();
         }
         Map<String, Object> realmAccess = (Map<String, Object>) realmAccessObj;
-
         Object rolesObj = realmAccess.get("roles");
         if (!(rolesObj instanceof List)) {
             return Collections.emptySet();
         }
         List<String> roles = (List<String>) rolesObj;
-
         return roles.stream()
                 .map(roleName -> new SimpleGrantedAuthority("ROLE_" + roleName))
                 .collect(Collectors.toSet());

@@ -76,17 +76,22 @@ public class SecurityConfig {
 #defaults
 psyjewnaut:
   keycloak-converters:
-    realm-access: true # realm_access.roles → ROLE_
-    resource-access: false # resource_access.<resource-client-ids>.roles → ROLE_
-    resource-client-ids: # default all
-       - test-client
-    scope: false # scope/scp → SCOPE_
-    groups: false # groups → ROLE_GROUP_
+    realm-access: true
+    resource-access: false 
+    resource-client-ids:
+       - all
+    scope: false
+    groups: false
 ```
+Claim <b> realm_access.roles</b> → <b>ROLE_</b> authority<br>
+Claim <b>resource_access.client.roles</b> → <b>ROLE_</b> authority<br>
+Claim <b>scope/scp</b> → <b>SCOPE_</b> authority<br>
+Claim <b>groups</b> → <b>ROLE_GROUP_</b> authority
+
 
 ## Принцип работы
 
 1. При запросе с Bearer-токеном Spring Security валидирует JWT.
 2. Передаёт его в keycloakJwtConverter.convert(jwt).
-3. Библиотека последовательно вызывает все выбранные конвертеры (realm, resource, scope, groups).
+3. Библиотека вызывает выбранные конвертеры (realm, resource, scope, groups).
 4. Получившиеся GrantedAuthority (например, ROLE_user, SCOPE_offline_access) складываются в Authentication запроса.
