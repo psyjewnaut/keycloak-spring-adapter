@@ -41,7 +41,7 @@
 <dependency>
     <groupId>dev.psyjewnaut.security</groupId>
     <artifactId>keycloak-spring-adapter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
