@@ -30,6 +30,9 @@
 
 ## Быстрый старт
 
+### 0. Установите библиотеку
+На данный момент библиотека публикуется в maven central. Для установки склонируйте репозиторий и запустите `mvn install`
+
 ### 1. Добавьте зависимость
 
 В `pom.xml` вашего проекта (Maven):
@@ -75,13 +78,14 @@ public class SecurityConfig {
 ```yaml
 #defaults
 psyjewnaut:
-  keycloak-converters:
-    realm-access: true
-    resource-access: false 
-    resource-client-ids:
-       - all
-    scope: false
-    groups: false
+   security:
+      keycloak:
+         converters:
+            scope: true
+            groups: true
+            realm-access: true
+            resource-access: true
+            resource-client-ids: null
 ```
 Claim <b> realm_access.roles</b> → <b>ROLE_</b> authority<br>
 Claim <b>resource_access.client.roles</b> → <b>ROLE_</b> authority<br>

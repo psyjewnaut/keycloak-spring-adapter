@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author psyjewnaut
  */
-@ConfigurationProperties(prefix = "psyjewnaut.keycloak.converters")
+@ConfigurationProperties(prefix = "psyjewnaut.security.keycloak.converters")
 @Getter
 @Setter
 public class KeycloakConvertersProperties {
@@ -25,7 +25,7 @@ public class KeycloakConvertersProperties {
     /**
      * Read resource_access.clientId.roles
      */
-    private boolean resourceAccess = false;
+    private boolean resourceAccess = true;
 
     /**
      * Include clientIds
@@ -35,11 +35,11 @@ public class KeycloakConvertersProperties {
     /**
      * Read scope (JwtGrantedAuthoritiesConverter)
      */
-    private boolean scope = false;
+    private boolean scope = true;
 
     /**
      * Read groups
      */
-    private boolean groups = false;
+    private boolean groups = true;
 
 }

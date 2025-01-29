@@ -1,6 +1,5 @@
 package dev.psyjewnaut.security.keycloak.adapter.converters;
 
-
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -21,7 +20,7 @@ public class ResourceAccessRoleConverter implements KeycloakClaimConverter {
     @Override
     @SuppressWarnings("unchecked")
     public Set<SimpleGrantedAuthority> convert(Jwt jwt) {
-        Object resourceAccessObj = jwt.getClaims().get("resource_access");
+        Object resourceAccessObj = jwt.getClaim("resource_access");
         if (!(resourceAccessObj instanceof Map)) {
             return Collections.emptySet();
         }

@@ -6,6 +6,29 @@
     <groupId>dev.psyjewnaut.security</groupId>
     <artifactId>keycloak-spring-adapter</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+
+    <name>keycloak-spring-adapter</name>
+    <description>Keycloak Spring Adapter</description>
+    <url>https://github.com/psyjewnaut/keycloak-spring-adapter</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Mikhail Ianin</name>
+            <email>psyjewnaut@gmail.com</email>
+            <organization>psyjewnaut</organization>
+            <organizationUrl>https://www.psyjewnaut.dev</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/psyjewnaut/keycloak-spring-adapter.git</connection>
+        <developerConnection>scm:git:ssh://github.com/psyjewnaut/keycloak-spring-adapter.git</developerConnection>
+        <url>https://github.com/psyjewnaut/keycloak-spring-adapter/tree/main</url>
+    </scm>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>

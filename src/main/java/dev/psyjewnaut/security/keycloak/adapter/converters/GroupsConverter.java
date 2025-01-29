@@ -16,7 +16,7 @@ public class GroupsConverter implements KeycloakClaimConverter {
     @Override
     @SuppressWarnings("unchecked")
     public Set<SimpleGrantedAuthority> convert(Jwt jwt) {
-        Object groupsObj = jwt.getClaims().get("groups");
+        Object groupsObj = jwt.getClaim("groups");
         if (!(groupsObj instanceof List)) {
             return Collections.emptySet();
         }

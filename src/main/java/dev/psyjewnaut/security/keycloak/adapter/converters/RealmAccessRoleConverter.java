@@ -16,7 +16,7 @@ public class RealmAccessRoleConverter implements KeycloakClaimConverter {
     @Override
     @SuppressWarnings("unchecked")
     public Set<SimpleGrantedAuthority> convert(Jwt jwt) {
-        Object realmAccessObj = jwt.getClaims().get("realm_access");
+        Object realmAccessObj = jwt.getClaim("realm_access");
         if (!(realmAccessObj instanceof Map)) {
             return Collections.emptySet();
         }
