@@ -45,7 +45,7 @@
 </dependency>
 ```
 
-## 2. Подключите бин в `SecurityFilterChain`
+### 2. Подключите бин в `SecurityFilterChain`
 
 В вашем классе конфигурации Spring Security (например, `SecurityConfig`):
 
@@ -72,7 +72,7 @@ public class SecurityConfig {
 Теперь KeycloakJwtConverter будет автоматически создан (если не переопределён вручную) и использован в качестве JwtAuthenticationConverter. 
 В результате в Authentication попадут JWT claims, указанные в application.yml.
 
-## (Опционально) Настройка KeycloakConvertersProperties
+### (Опционально) Настройка KeycloakConvertersProperties
 В application.yml можно включать/отключать отдельные конвертеры, а так же ограничить resource_access только определёнными клиентами:
 
 ```yaml
